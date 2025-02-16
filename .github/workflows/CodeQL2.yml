@@ -1,0 +1,22 @@
+name: "CodeQL Analysis" 
+# this uses codeQL to check All languages for faults/issues the prior file only checked java and pythong
+on: 
+  push: 
+    branches: [main] 
+  pull_request: 
+    branches: [main] 
+jobs: 
+  analyze: 
+    name: Analyze 
+    runs-on: ubuntu-latest 
+    permissions:
+      security-events: write
+    steps:
+      - name: Checkout repository 
+        uses: actions/checkout@v3  # ✅ Use latest version
+
+      - name: Initialize CodeQL 
+        uses: github/codeql-action/init@v2
+        
+      - name: Perform CodeQL Analysis 
+        uses: github/codeql-action/analyze@v2

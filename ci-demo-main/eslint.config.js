@@ -1,4 +1,4 @@
-module.export = [
+export [
     {
         rules: {
             semi: "error",

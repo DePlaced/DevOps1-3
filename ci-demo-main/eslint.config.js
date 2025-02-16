@@ -1,10 +1,8 @@
-{
-  "languageOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
-  },
-  "rules": {
-    "semi": ["error", "always"],
-    "quotes": ["error", "double"]
-  }
-}
+export default [
+    {
+        rules: {
+            semi: "error",
+            "prefer-const": "error"
+        }
+    }
+];

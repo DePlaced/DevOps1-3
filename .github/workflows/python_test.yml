@@ -23,4 +23,4 @@ jobs:
 
       - name: Run tests
         run: |
-           pytest python/test/**/*.py
+           pytest python/test/*.py

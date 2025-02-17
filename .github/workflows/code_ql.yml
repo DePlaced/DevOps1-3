@@ -1,28 +1,26 @@
-name: "CodeQL Analysis" 
+name: CodeQL Analysis
 
 on: 
   push: 
-    branches: [main] 
   pull_request: 
-    branches: [main] 
 
 permissions:
   actions: read
   contents: read
-  security-events: write  # ✅ Required for CodeQL to upload results
+  security-events: write  # Required for CodeQL to upload results
 
 jobs: 
   analyze: 
-    name: Analyze 
+    name: analyze-code
     runs-on: ubuntu-latest 
     steps:
       - name: Checkout repository 
-        uses: actions/checkout@v4  # ✅ Use latest version
+        uses: actions/checkout@v4
 
       - name: Initialize CodeQL 
         uses: github/codeql-action/init@v3
         with:
-          languages: javascript, python  # ✅ Adjust based on your project
+          languages: javascript, python
 
       - name: Perform CodeQL Analysis 
         uses: github/codeql-action/analyze@v3

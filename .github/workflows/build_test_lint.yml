@@ -22,4 +22,6 @@ jobs:
       - name: Run tests
         run: npm test
       - name: Run linter
-        run: npx eslint .
+        run: npx eslint . --fix
+      - name: Run prettier
+        run: npx prettier . --write

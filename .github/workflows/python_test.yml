@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: python  # Set working directory to 'python'
+        working-directory: python
 
     steps:
       - name: Checkout code
@@ -24,7 +24,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install pylint black pytest pytest-cov
-
+          
+      - name: Auto-format with Black
+        run: |
+          black .
+          
       - name: Run Black (Code Formatter)
         run: |
           black --check --diff .  # Check formatting for all files in python/

@@ -1,8 +1,8 @@
-from app.app import addition
-
 """
 This module contains tests for app/app.py module.
 """
+
+from app.app import addition
 
 def test_addition():
     

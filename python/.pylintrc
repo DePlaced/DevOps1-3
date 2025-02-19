@@ -1,0 +1,4 @@
+ 
+[MESSAGES CONTROL]
+disable=C0114,C0115,C0116  # Disable missing module/class/function docstrings
+max-line-length=88  # Match Black's formatting standard

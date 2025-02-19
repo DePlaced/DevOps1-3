@@ -1,4 +1,7 @@
 import unittest
+import sys
+import os
+sys.path.append(os.path.abspath("C:/Users/paapl/desktop/GIT/DevOps1-3/python"))
 from app import addition
 
 class TestAdditionFunction(unittest.TestCase):

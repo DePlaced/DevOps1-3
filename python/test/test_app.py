@@ -1,5 +1,5 @@
 import unittest
-from app import addition  # Import the function you want to test
+from app import addition
 
 class TestAdditionFunction(unittest.TestCase):
 

@@ -1,7 +1,15 @@
-import pytest
 from app.app import addition
 
+"""
+This module contains tests for app/app.py module.
+"""
+
 def test_addition():
+    
+    """
+    Test the functionality of addition in app/app.py.
+    """
+    
     assert addition(3, 5) == 8
     assert addition(-3, 5) == 2
     assert addition(0, 5) == 5
